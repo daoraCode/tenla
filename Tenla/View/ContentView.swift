@@ -17,7 +17,7 @@ struct ContentView: View {
         
         
         NavigationView {
-            
+            //cette zstack détermine la couleur de tout l'écran, elle englobe tou les éléments de la vue principale
             ZStack {
                 
                 Color("main red")
@@ -25,46 +25,45 @@ struct ContentView: View {
                 
                 VStack {
                     VStack(alignment: .center) {
-                        Image("lemon")
+                        Image("objective")
                             .resizable()
                             .frame(width:210, height:210, alignment: .center)
                             .clipShape(Circle())
                             .overlay(
                                 Circle().stroke(Color.gray, lineWidth: 0.1))
                     }.frame(height: 150)
-                    //                    Spacer()
-                    
-                    //                        .padding(.bottom)
-                    //Spacer()
+
                     
                     VStack(alignment: .leading) {
                         Text("Menu principal")
-                            .fontWeight(.regular)
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("jupiter yellow"))
+                            .font(.system(size: 24))
                         Text("")
                             .font(.subheadline)
+                        
                         Divider()
                         NavigationLink(destination: ChannelView()){
-                            Text("Ajouter une chaîne").foregroundColor(Color("main yellow"))
+                            Text("Ajouter une chaîne").fontWeight(.semibold).foregroundColor(Color("jupiter yellow"))
                         }
                         Button(action: {
                             self.showingSecondVC.toggle()
                         }){
-                            Text("À Propos de Tenla").foregroundColor(Color("main yellow"))
+                            Text("À Propos de Tenla").fontWeight(.semibold).foregroundColor(Color("jupiter yellow"))
                         }
                         .sheet(isPresented: $showingSecondVC){
                             SecondView()
                         }
                     }
                     .frame(height: 300)
-                    
-                    //Spacer()
                 }.padding()
-                    // Color("main yellow")
+
                     .edgesIgnoringSafeArea(.bottom)
                 
                 
             }.navigationBarTitle("Tenla")
-            //.background(Color("main yellow"))
+
         }
         
     }
