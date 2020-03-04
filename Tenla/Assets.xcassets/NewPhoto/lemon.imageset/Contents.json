@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "lemon.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "First icon.png",
       "scale" : "2x"
     },
     {

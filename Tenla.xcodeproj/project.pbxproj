@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				B3EB56AD24071168005BB27B /* Font */,
-				B30E8D752407F8C5001B4D3D /* Model */,
 				B3EB56AE2407117E005BB27B /* Lifecycle */,
+				B30E8D752407F8C5001B4D3D /* Model */,
 				B3C475E824081AA900D8AAF7 /* View */,
 				B329D5FB240702FB00FF6D33 /* Assets.xcassets */,
 				B329D600240702FB00FF6D33 /* LaunchScreen.storyboard */,
