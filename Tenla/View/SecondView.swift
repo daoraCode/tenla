@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SecondView: View {
-    
+
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     //    @State private var videoTitle = ""
@@ -24,8 +24,6 @@ struct SecondView: View {
             ZStack {
                 Color("main red")
                     .edgesIgnoringSafeArea(.all)
-                
-                
                 
                 
                 VStack {

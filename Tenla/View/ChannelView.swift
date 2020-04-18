@@ -10,7 +10,17 @@ import SwiftUI
 
 struct ChannelView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        
+        
+        ZStack {
+            Color("main red")
+                .edgesIgnoringSafeArea(.all)
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                .foregroundColor(.white)
+        }
+        
+        
     }
 }
 

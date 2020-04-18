@@ -16,8 +16,8 @@ struct ContentView: View {
         
         
         
-        NavigationView {
-            //cette zstack détermine la couleur de tout l'écran, elle englobe tou les éléments de la vue principale
+        NavigationView {            //cette zstack détermine la couleur rouge de tout l'écran, elle englobe tous les éléments de la vue principale
+            
             ZStack {
                 
                 Color("main red")
@@ -27,12 +27,14 @@ struct ContentView: View {
                     VStack(alignment: .center) {
                         Image("objective")
                             .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .frame(width:210, height:210, alignment: .center)
                             .clipShape(Circle())
                             .overlay(
                                 Circle().stroke(Color.gray, lineWidth: 0.1))
-                    }.frame(height: 150)
-
+                    }
+                    .frame(height: 150)
+                    
                     
                     VStack(alignment: .leading) {
                         Text("Menu principal")
@@ -57,13 +59,15 @@ struct ContentView: View {
                         }
                     }
                     .frame(height: 300)
+                    //                    .frame(minWidth: 200, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity, alignment: Alignment.topLeading)
+                    
                 }.padding()
-
+                    
                     .edgesIgnoringSafeArea(.bottom)
                 
                 
             }.navigationBarTitle("Tenla")
-
+            
         }
         
     }
