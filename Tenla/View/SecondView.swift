@@ -32,6 +32,7 @@ struct SecondView: View {
                         .resizable()
                         .frame(width: 50.5, height: 50.5)
                         .padding(.bottom, 45.5)
+                    
                     Divider()
                     
                     Text("Une minute papillon, c'est quoi Tenla... ? 🧐")
@@ -46,7 +47,7 @@ struct SecondView: View {
                             .lineLimit(nil)
                             .padding(.all)
                     }
-                    
+                    .frame(height: 390)
                     
                 }
                 
