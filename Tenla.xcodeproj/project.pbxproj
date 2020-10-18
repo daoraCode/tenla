@@ -14,12 +14,12 @@
 		B329D5FF240702FB00FF6D33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B329D5FE240702FB00FF6D33 /* Preview Assets.xcassets */; };
 		B329D602240702FB00FF6D33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B329D600240702FB00FF6D33 /* LaunchScreen.storyboard */; };
 		B3C475E524081A1200D8AAF7 /* ChannelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C475E424081A1200D8AAF7 /* ChannelData.swift */; };
-		B3C475E724081A9C00D8AAF7 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C475E624081A9C00D8AAF7 /* ChannelView.swift */; };
 		B3C475EA24081B2C00D8AAF7 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C475E924081B2C00D8AAF7 /* SecondView.swift */; };
 		B3CD40E7240980700002DC66 /* VideoIdea.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD40E6240980700002DC66 /* VideoIdea.swift */; };
 		B3EB56A724071001005BB27B /* Oxygen-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3EB56A624071001005BB27B /* Oxygen-Bold.ttf */; };
 		B3EB56A92407100C005BB27B /* Oxygen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3EB56A82407100C005BB27B /* Oxygen-Regular.ttf */; };
 		B3EB56AB24071022005BB27B /* Oxygen-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3EB56AA24071022005BB27B /* Oxygen-Light.ttf */; };
+		C3CDE679253643AC00A648EE /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CDE678253643AC00A648EE /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +32,12 @@
 		B329D601240702FB00FF6D33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B329D603240702FB00FF6D33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C475E424081A1200D8AAF7 /* ChannelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelData.swift; sourceTree = "<group>"; };
-		B3C475E624081A9C00D8AAF7 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		B3C475E924081B2C00D8AAF7 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		B3CD40E6240980700002DC66 /* VideoIdea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoIdea.swift; sourceTree = "<group>"; };
 		B3EB56A624071001005BB27B /* Oxygen-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Bold.ttf"; sourceTree = "<group>"; };
 		B3EB56A82407100C005BB27B /* Oxygen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Regular.ttf"; sourceTree = "<group>"; };
 		B3EB56AA24071022005BB27B /* Oxygen-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Light.ttf"; sourceTree = "<group>"; };
+		C3CDE678253643AC00A648EE /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 			children = (
 				B329D5F9240702F800FF6D33 /* ContentView.swift */,
 				B3C475E924081B2C00D8AAF7 /* SecondView.swift */,
-				B3C475E624081A9C00D8AAF7 /* ChannelView.swift */,
+				C3CDE678253643AC00A648EE /* CameraView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Daora Rouge";
 				TargetAttributes = {
 					B329D5F1240702F800FF6D33 = {
@@ -203,11 +203,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C475EA24081B2C00D8AAF7 /* SecondView.swift in Sources */,
+				C3CDE679253643AC00A648EE /* CameraView.swift in Sources */,
 				B3CD40E7240980700002DC66 /* VideoIdea.swift in Sources */,
 				B329D5F6240702F800FF6D33 /* AppDelegate.swift in Sources */,
 				B329D5F8240702F800FF6D33 /* SceneDelegate.swift in Sources */,
 				B329D5FA240702F800FF6D33 /* ContentView.swift in Sources */,
-				B3C475E724081A9C00D8AAF7 /* ChannelView.swift in Sources */,
 				B3C475E524081A1200D8AAF7 /* ChannelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +252,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -312,6 +313,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

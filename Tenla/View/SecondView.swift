@@ -22,8 +22,7 @@ struct SecondView: View {
         NavigationView {
             
             ZStack {
-                Color("main red")
-                    .edgesIgnoringSafeArea(.all)
+               
                 
                 
                 VStack {
@@ -37,7 +36,6 @@ struct SecondView: View {
                     
                     Text("Une minute papillon, c'est quoi Tenla... ? 🧐")
                         .fontWeight(.medium)
-                        .foregroundColor(Color.white)
                         .multilineTextAlignment(.center)
                         .padding(.all)
                     
@@ -48,13 +46,12 @@ struct SecondView: View {
                             .padding(.all)
                     }
                     .frame(height: 390)
-                    
+                   
                 }
                 
             }
             
-        }.background(Color("main yellow"))
-            .edgesIgnoringSafeArea(.all)
+        }
         
     }
     

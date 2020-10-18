@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "imagePlaceholder.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "First icon.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
