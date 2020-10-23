@@ -14,10 +14,12 @@ struct ContentView: View {
     @State private var showingCameraView: Bool = false
     
     var body : some View {
-        
-        NavigationView { //cette zstack détermine la couleur rouge de tout l'écran, elle englobe tous les éléments de la vue principale
+        NavigationView {
             ZStack {
-                Color("main red")
+                
+//cette zstack détermine la couleur rouge de tout l'écran, elle englobe tous les éléments de la vue principale
+            
+            Color("jupiter yellow")
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     
@@ -50,6 +52,7 @@ struct ContentView: View {
                         .sheet(isPresented: $showingSecondView){
                             SecondView()
                         }.padding()
+                        
                     }.navigationBarTitle("Tenla")
                     
                 }

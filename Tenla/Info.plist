@@ -60,5 +60,7 @@
 		<string>Oxygen-Regular.ttf</string>
 		<string>Oxygen-Bold.ttf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>This app uses the camera to act like a mirror</string>
 </dict>
 </plist>

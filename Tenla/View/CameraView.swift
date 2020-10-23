@@ -12,48 +12,54 @@ struct CameraView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    
+    @State private var image: Image? = nil
+    @State private var inputImage: UIImage? = nil
     @State private var showSheet: Bool = false
     @State private var showImagePicker: Bool = false
     @State private var sourceType: UIImagePickerController.SourceType = .camera
     
     var body: some View {
         
-        NavigationView {
+        ZStack {
+            Color("main red")
+                .edgesIgnoringSafeArea(.all)
+            Image("imagePlaceholder")
+                .resizable()
+                .frame(width: 200, height: 200)
+                .cornerRadius(20)
+            
+            
+            Spacer()
             ZStack {
-                Color("main red")
-                    .edgesIgnoringSafeArea(.all)
-                Image("imagePlaceholder")
-                    .resizable()
-                    .frame(width: 200, height: 200)
+                Button("Choose Picture") {
+                    self.showSheet = true
+                }.padding()
+                .actionSheet(isPresented: $showSheet) {
+                    ActionSheet(title: Text("Select a photo"), message: Text("Choose"), buttons: [
+                        .default(Text("Photo Library")) {
+                            self.showImagePicker = true
+                            self.sourceType = .photoLibrary
+                        },
+                        .default(Text("Camera")) {
+                            self.showImagePicker = true
+                            self.sourceType = .camera
+                        },
+                        .cancel()
+                    ])
                     
-                    
-        Spacer()
-               ZStack {
-                    Button("Choose Picture") {
-                        self.showSheet = true
-                    }.padding()
-                    .actionSheet(isPresented: $showSheet) {
-                        ActionSheet(title: Text("Select a photo"), message: Text("Choose"), buttons: [
-                            .default(Text("Photo Library")) {
-                                self.showImagePicker = true
-                                self.sourceType = .photoLibrary
-                            },
-                            .default(Text("Camera")) {
-                                self.showImagePicker = true
-                                self.sourceType = .camera
-                            },
-                            .cancel()
-                        ])
-                        
-                    }
                 }
             }
-            
             .navigationBarTitle("Camera")
-        }.sheet(isPresented: $showImagePicker) {
-            Text("MODAL")
+        }.sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
+            ImagePicker(inputImage: self.$inputImage, sourceType: self.sourceType)
         }
+//        .sheet(isPresented: $showImagePicker) {
+//            Text("MODAL")
+//        }
+    }
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
     }
 }
 struct CameraView_Previews: PreviewProvider {

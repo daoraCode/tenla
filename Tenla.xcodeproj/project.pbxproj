@@ -20,6 +20,7 @@
 		B3EB56A92407100C005BB27B /* Oxygen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3EB56A82407100C005BB27B /* Oxygen-Regular.ttf */; };
 		B3EB56AB24071022005BB27B /* Oxygen-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3EB56AA24071022005BB27B /* Oxygen-Light.ttf */; };
 		C3CDE679253643AC00A648EE /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CDE678253643AC00A648EE /* CameraView.swift */; };
+		C3EC7B9425407CE3005E0851 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EC7B9325407CE3005E0851 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B3EB56A82407100C005BB27B /* Oxygen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Regular.ttf"; sourceTree = "<group>"; };
 		B3EB56AA24071022005BB27B /* Oxygen-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Light.ttf"; sourceTree = "<group>"; };
 		C3CDE678253643AC00A648EE /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		C3EC7B9325407CE3005E0851 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				B3C475E424081A1200D8AAF7 /* ChannelData.swift */,
 				B3CD40E6240980700002DC66 /* VideoIdea.swift */,
+				C3EC7B9325407CE3005E0851 /* ImagePicker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				B3CD40E7240980700002DC66 /* VideoIdea.swift in Sources */,
 				B329D5F6240702F800FF6D33 /* AppDelegate.swift in Sources */,
 				B329D5F8240702F800FF6D33 /* SceneDelegate.swift in Sources */,
+				C3EC7B9425407CE3005E0851 /* ImagePicker.swift in Sources */,
 				B329D5FA240702F800FF6D33 /* ContentView.swift in Sources */,
 				B3C475E524081A1200D8AAF7 /* ChannelData.swift in Sources */,
 			);
@@ -277,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -332,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -352,7 +356,7 @@
 				DEVELOPMENT_TEAM = JBCVY683YK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Tenla/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,7 +379,7 @@
 				DEVELOPMENT_TEAM = JBCVY683YK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Tenla/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
