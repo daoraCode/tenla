@@ -8,7 +8,19 @@
 
 import SwiftUI
 
+class ImageSaver: NSObject {
+    func writeToPhotoAlbum(image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveError), nil)
+    }
+    @objc func saveError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        print("Élément sauvegardé")
+    }
+    }
+
+
 struct CameraView: View {
+    
+    
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -17,6 +29,8 @@ struct CameraView: View {
     @State private var showSheet: Bool = false
     @State private var showImagePicker: Bool = false
     @State private var sourceType: UIImagePickerController.SourceType = .camera
+    
+    
     
     var body: some View {
         
@@ -53,13 +67,16 @@ struct CameraView: View {
         }.sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
             ImagePicker(inputImage: self.$inputImage, sourceType: self.sourceType)
         }
-//        .sheet(isPresented: $showImagePicker) {
-//            Text("MODAL")
-//        }
     }
+    
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
+        UIImageWriteToSavedPhotosAlbum(inputImage, nil, nil, nil)
+        
+        let imageSaver = ImageSaver()
+        imageSaver.writeToPhotoAlbum(image: inputImage)
+        
     }
 }
 struct CameraView_Previews: PreviewProvider {

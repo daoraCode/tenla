@@ -12,9 +12,9 @@ struct SecondView: View {
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    //    @State private var videoTitle = ""
-    //    @State private var videoContent = ""
-    
+    // @State private var videoTitle = ""
+    // @State private var videoContent = ""
+    @Binding var dismissSheetAbout: Bool
     
     
     
@@ -23,14 +23,16 @@ struct SecondView: View {
             
             ZStack {
                
-                
+                Color("jupiter yellow")
+                    
+                    .edgesIgnoringSafeArea(.vertical)
                 
                 VStack {
 
                     Image("First icon")
                         .resizable()
                         .frame(width: 50.5, height: 50.5)
-                        .padding(.bottom, 45.5)
+                        .padding(.bottom, 32)
                     
                     Divider()
                     
@@ -45,11 +47,17 @@ struct SecondView: View {
                             .lineLimit(nil)
                             .padding(.all)
                     }
-                    .frame(height: 390)
+//                    .frame(height: )
                    
                 }
                 
             }
+            .navigationBarItems(trailing: Button(action: {
+                                            self.dismissSheetAbout.toggle()
+                                           }, label: {
+                                            Text("Fermer")
+                                           })
+                                    )
             
         }
         
@@ -58,6 +66,6 @@ struct SecondView: View {
 }
 struct SecondView_Previews: PreviewProvider {
     static var previews: some View {
-        SecondView()
+        SecondView(dismissSheetAbout: .constant(false))
     }
 }

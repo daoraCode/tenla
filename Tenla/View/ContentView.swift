@@ -13,33 +13,36 @@ struct ContentView: View {
     @State private var showingSecondView: Bool = false
     @State private var showingCameraView: Bool = false
     
+    
     var body : some View {
         NavigationView {
             ZStack {
                 
-//cette zstack détermine la couleur rouge de tout l'écran, elle englobe tous les éléments de la vue principale
-            
-            Color("jupiter yellow")
-                    .edgesIgnoringSafeArea(.all)
-                VStack {
+                //cette zstack détermine la couleur rouge de tout l'écran, elle englobe tous les éléments de la vue principale
+                
+                Color("main red")
                     
+                    .edgesIgnoringSafeArea(.vertical)
+                
+                VStack {
+                    //                  Spacer()
                     VStack(alignment: .center) {
                         Image("objective")
                             .resizable()
-                            .frame(width: 300, height: 300)
+                            .frame(width: 260, height: 260)
                             .clipShape(Circle())
-                            .padding(.bottom, 45.5)
                     }
                     .padding()
-                    VStack {
+//                    Spacer()
+                    VStack(alignment: .leading) {
                         Text("Menu principal")
-                            .font(.title)
+                            .font(.headline)
                             .fontWeight(.semibold)
                             .foregroundColor(Color(.white))
                         
+                        
                         Divider()
-                            
-                            .padding()
+                        // .padding()
                         NavigationLink(destination: CameraView()){
                             Text("Appareil Photo").fontWeight(.semibold).foregroundColor(Color("jupiter yellow"))
                         }
@@ -48,13 +51,14 @@ struct ContentView: View {
                             self.showingSecondView.toggle()
                         }){
                             Text("À Propos").fontWeight(.semibold).foregroundColor(Color("jupiter yellow"))
-                        }
+                        }.padding(.top, 2)
                         .sheet(isPresented: $showingSecondView){
-                            SecondView()
-                        }.padding()
+                            SecondView(dismissSheetAbout: $showingSecondView)
+                        }
                         
                     }.navigationBarTitle("Tenla")
-                    
+                    .padding(.horizontal, 15)
+                    Spacer()
                 }
                 
             }

@@ -62,5 +62,7 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>This app uses the camera to act like a mirror</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Tenla needs to access your Photo Library</string>
 </dict>
 </plist>
