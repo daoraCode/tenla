@@ -8,19 +8,19 @@
 
 import SwiftUI
 
+
 class ImageSaver: NSObject {
+    
     func writeToPhotoAlbum(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveError), nil)
     }
     @objc func saveError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         print("Élément sauvegardé")
     }
-    }
+}
 
 
 struct CameraView: View {
-    
-    
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -31,16 +31,15 @@ struct CameraView: View {
     @State private var sourceType: UIImagePickerController.SourceType = .camera
     
     
-    
     var body: some View {
         
         ZStack {
             Color("main red")
                 .edgesIgnoringSafeArea(.all)
-            Image("imagePlaceholder")
-                .resizable()
-                .frame(width: 200, height: 200)
-                .cornerRadius(20)
+//            Image("imagePlaceholder")
+//                .resizable()
+//                .frame(width: 200, height: 200)
+//                .cornerRadius(20)
             
             
             Spacer()
@@ -76,9 +75,13 @@ struct CameraView: View {
         
         let imageSaver = ImageSaver()
         imageSaver.writeToPhotoAlbum(image: inputImage)
-        
-    }
+   }
 }
+
+
+
+
+
 struct CameraView_Previews: PreviewProvider {
     static var previews: some View {
         CameraView()

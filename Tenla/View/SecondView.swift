@@ -23,22 +23,22 @@ struct SecondView: View {
             
             ZStack {
                
-                Color("jupiter yellow")
-                    
-                    .edgesIgnoringSafeArea(.vertical)
+//                Color("jupiter yellow")
+//
+//                    .edgesIgnoringSafeArea(.vertical)
                 
                 VStack {
 
                     Image("First icon")
                         .resizable()
-                        .frame(width: 50.5, height: 50.5)
+                        .frame(width: 54.5, height: 54.5)
                         .padding(.bottom, 32)
                     
                     Divider()
                     
                     Text("Une minute papillon, c'est quoi Tenla... ? 🧐")
                         .fontWeight(.medium)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(.trailing)
                         .padding(.all)
                     
                     ScrollView {
@@ -55,7 +55,7 @@ struct SecondView: View {
             .navigationBarItems(trailing: Button(action: {
                                             self.dismissSheetAbout.toggle()
                                            }, label: {
-                                            Text("Fermer")
+                                            Text("OK")
                                            })
                                     )
             
