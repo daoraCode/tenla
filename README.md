@@ -1,5 +1,5 @@
 # tenla
-Tenla project is a mobile application that will include some functions for photos in many ways, sharing with family and friends. Project builded with SwiftUI
+Tenla is a mobile project application that will include some functions for photos in many ways, sharing with family and friends. Project builded with SwiftUI
 
 
 
